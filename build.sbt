@@ -8,9 +8,9 @@ name := "microbuilder-js"
 
 haxelibDependencies += "microbuilder-core" -> DependencyVersion.SpecificVersion("0.1.2")
 
-libraryDependencies += "com.thoughtworks.microbuilder" % "microbuilder-core_2.11" % "0.1.2" % HaxeJs classifier HaxeJs.name
+libraryDependencies += "com.thoughtworks.microbuilder" % "microbuilder-core" % "0.2.0" % HaxeJs classifier HaxeJs.name
 
-libraryDependencies += "com.thoughtworks.microbuilder" % "json-stream_2.11" % "2.0.3" % HaxeJs classifier HaxeJs.name
+libraryDependencies += "com.thoughtworks.microbuilder" % "json-stream-core" % "3.0.0" % HaxeJs classifier HaxeJs.name
 
 
 val haxelibs = Map(
@@ -43,7 +43,7 @@ developers := List(
 
 haxelibContributors := Seq("Atry")
 
-haxelibReleaseNote := "Add JsOutgoingService implementation"
+haxelibReleaseNote := "Upgrade microbuilder-core"
 
 haxelibTags ++= Seq(
   "javascript", "js",
