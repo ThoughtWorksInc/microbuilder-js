@@ -31,26 +31,8 @@ class JsOutgoingJsonService extends MicrobuilderOutgoingJsonService {
     super(urlPrefix, routeConfiguration);
     this.request = request;
   }
-  
-  override public function post(url:String, httpMethod:String, requestContentType:String, requestBody: String):Void {
-    var headers = [];
-    if (requestContentType != null) {
-      headers.push({
-        name: "Content-Type",
-        value: requestContentType
-      });
-    }
-    request(
-      {
-        url: url,
-        method: httpMethod,
-        headers: headers,
-        body: requestBody,
-      }
-    );
-  }
 
-  override public function send(url:String, httpMethod:String, requestContentType:String, requestBody: String, responseHandler:Null<Dynamic>->?Int->?String->Void):Void {
+  override public function send(url:String, httpMethod:String, requestContentType:String, requestBody: String, ?responseHandler:Null<Dynamic>->?Int->?String->Void):Void {
     var headers = [];
     if (requestContentType != null) {
       headers.push({
@@ -58,21 +40,32 @@ class JsOutgoingJsonService extends MicrobuilderOutgoingJsonService {
         value: requestContentType
       });
     }
-    request(
-      {
-        url: url,
-        method: httpMethod,
-        headers: headers,
-        body: requestBody,
-      },
-      function (error, response, responseBody) {
-        if (error == null) {
-          responseHandler(null, response.statusCode, responseBody);
-        } else {
-          responseHandler(error);
+    if (responseHandler == null) {
+      request(
+        {
+          url: url,
+          method: httpMethod,
+          headers: headers,
+          body: requestBody,
         }
-      }
-    );
+      );
+    } else {
+      request(
+        {
+          url: url,
+          method: httpMethod,
+          headers: headers,
+          body: requestBody,
+        },
+        function (error, response, responseBody) {
+          if (error == null) {
+            responseHandler(null, response.statusCode, responseBody);
+          } else {
+            responseHandler(error);
+          }
+        }
+      );
+    }
   }
   
 
