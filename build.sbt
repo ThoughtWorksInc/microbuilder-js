@@ -2,6 +2,14 @@ disablePlugins(HaxeJavaPlugin)
 
 enablePlugins(HaxeJsPlugin)
 
+enablePlugins(HaxeJsNpmPlugin)
+
+publishArtifact in packageBin in Compile  := false
+
+publishArtifact in packageSrc in Compile  := false
+
+publishArtifact in packageDoc in Compile  := false
+
 organization := "com.thoughtworks.microbuilder"
 
 name := "microbuilder-js"
