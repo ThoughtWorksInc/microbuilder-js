@@ -88,3 +88,5 @@ scmInfo := Some(ScmInfo(
   Some(s"scm:git:git@github.com:ThoughtWorksInc/${name.value}.git")))
 
 licenses += "Apache" -> url("http://www.apache.org/licenses/LICENSE-2.0")
+
+haxeOptions in Js += "haxe.CallStack"
