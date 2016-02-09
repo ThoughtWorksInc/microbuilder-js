@@ -8,9 +8,9 @@ organization := "com.thoughtworks.microbuilder"
 
 name := "microbuilder-js"
 
-haxelibDependencies += "microbuilder-core" -> DependencyVersion.SpecificVersion("2.0.0")
+haxelibDependencies += "microbuilder-core" -> DependencyVersion.SpecificVersion("2.0.1")
 
-libraryDependencies += "com.thoughtworks.microbuilder" % "microbuilder-core" % "2.0.0" % HaxeJs classifier HaxeJs.name
+libraryDependencies += "com.thoughtworks.microbuilder" % "microbuilder-core" % "2.0.1" % HaxeJs classifier HaxeJs.name
 
 libraryDependencies += "com.thoughtworks.microbuilder" % "json-stream-core" % "3.0.0" % HaxeJs classifier HaxeJs.name
 
