@@ -10,11 +10,11 @@ name := "microbuilder-js"
 
 resolvers += "Sonatype Public" at "https://oss.sonatype.org/content/groups/public"
 
-haxelibDependencies += "microbuilder-core" -> DependencyVersion.SpecificVersion("2.0.1")
+haxelibDependencies += "microbuilder-core" -> DependencyVersion.SpecificVersion("2.0.4")
 
-libraryDependencies += "com.thoughtworks.microbuilder" % "microbuilder-core" % "2.0.1" % HaxeJs classifier HaxeJs.name
+libraryDependencies += "com.thoughtworks.microbuilder" % "microbuilder-core" % "2.0.4" % HaxeJs classifier HaxeJs.name
 
-libraryDependencies += "com.thoughtworks.microbuilder" % "json-stream-core" % "3.0.0" % HaxeJs classifier HaxeJs.name
+libraryDependencies += "com.thoughtworks.microbuilder" % "json-stream-core" % "3.0.2" % HaxeJs classifier HaxeJs.name
 
 val haxelibs = Map(
   "continuation" -> DependencyVersion.SpecificVersion("1.3.2")
@@ -46,7 +46,7 @@ developers := List(
 
 haxelibContributors := Seq("Atry")
 
-haxelibReleaseNote := "Upgrade microbuilder-core"
+haxelibReleaseNote := "Adjust method signatures"
 
 haxelibTags ++= Seq(
   "javascript", "js",
