@@ -16,4 +16,6 @@ project/plugins/project/
 .scala_dependencies
 .worksheet
 
+# Files created for deployment
+secret/
 local.sbt
