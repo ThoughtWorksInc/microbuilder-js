@@ -86,4 +86,6 @@ releaseProcess := {
 
 releaseProcess -= runClean
 
-releaseProcess -= runTest]
+releaseProcess -= runTest
+
+doc in Compile <<= doc in Haxe
