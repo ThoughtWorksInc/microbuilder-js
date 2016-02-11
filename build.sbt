@@ -86,4 +86,4 @@ releaseProcess := {
 
 releaseProcess -= runClean
 
-releaseProcess -= runTest
+releaseProcess -= runTest]
