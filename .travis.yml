@@ -26,6 +26,7 @@ before_install:
   - export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:$HOME/opt/neko
   - export HAXE_STD_PATH=$HOME/opt/haxe/std
   - haxelib setup $HOME/.haxelib-local
+  - travis_retry haxelib install dox --always
 
 install:
   - sbt ";haxelibInstallDependencies;update"
