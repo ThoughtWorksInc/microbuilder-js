@@ -46,7 +46,7 @@ developers := List(
 
 haxelibContributors := Seq("Atry")
 
-haxelibReleaseNote := "Adjust method signatures"
+haxelibReleaseNote := "Upgrade microbuilder-core"
 
 haxelibTags ++= Seq(
   "javascript", "js",
